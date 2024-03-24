@@ -24,4 +24,11 @@ try:
 except ValueError as e:
     print(f"Error: {e}")
 
+# Task 8 (Inheritance):
+class CubicGenerator(SquareGenerator):
+    def generate_squares(self, start, end):
+    # Task 5 (Exceptions) is also inherited, so we need to handle if end < start
+        if end < start:
+            raise ValueError("End of the range cannot be less than the start.")
+        return [x**3 for x in range(start, end + 1)]
 

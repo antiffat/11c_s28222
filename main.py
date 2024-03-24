@@ -1,9 +1,5 @@
 from square_generator.square_generator import SquareGenerator
 
-<<<<<<< Updated upstream
-print("W")
-=======
->>>>>>> Stashed changes
 # Task 1 (List Comprehensions):
 squares = [x**2 for x in range(1, 11)]
 print(squares)
@@ -32,7 +28,7 @@ print(" Task 8: List of cubes from 1 to 5: ", cubes)
 generator = CubicGenerator() # I changed it from SquareGenerator to Cubic Generator because SquareGenerator is abstract after task 10.
 try:
     squares = generator.generate_squares(1, 10)
-    print("List of squares from 1 to 10:", squares)
+    print("List of cubes from 1 to 10:", squares)
 
     square_roots = generator.calculate_square_roots(squares)
     print("Square roots of the generated squares:", square_roots)

@@ -1,5 +1,6 @@
 import math
 
+# Task 6 (Modules):
 class SquareGenerator:
     def generate_squares(self, start, end):
         # Task 5 (Exceptions):

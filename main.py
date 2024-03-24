@@ -1,4 +1,4 @@
-from square_generator import SquareGenerator
+from square_generator.square_generator import SquareGenerator
 
 # Task 1 (List Comprehensions):
 squares = [x**2 for x in range(1, 11)]
@@ -24,5 +24,4 @@ try:
 except ValueError as e:
     print(f"Error: {e}")
 
-# Task 6 (Modules):
 

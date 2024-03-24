@@ -1,5 +1,6 @@
 from square_generator.square_generator import SquareGenerator
 
+print("W")
 # Task 1 (List Comprehensions):
 squares = [x**2 for x in range(1, 11)]
 print(squares)

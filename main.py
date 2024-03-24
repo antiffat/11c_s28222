@@ -32,3 +32,8 @@ class CubicGenerator(SquareGenerator):
             raise ValueError("End of the range cannot be less than the start.")
         return [x**3 for x in range(start, end + 1)]
 
+    # Task 9 (Function overriding):
+    def generate_squares(self, start, end):
+        if end < start:
+            raise ValueError("End of the range cannot be less than the start.")
+        return super().generate_squares(start, end)

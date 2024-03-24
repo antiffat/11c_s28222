@@ -11,9 +11,21 @@ def generate_squares(start, end):
 squares = generate_squares(1, 10)
 print("List of squares from 1 to 10: ", squares)
 
-# Task 3 (Classes) (it is now moved to square_generator module):
+# Task 8 (Inheritance):
+class CubicGenerator(SquareGenerator):
+    def generate_squares(self, start, end):
+    # Task 5 (Exceptions) is also inherited, so we need to handle if end < start
+        if end < start:
+            raise ValueError("End of the range cannot be less than the start.")
+        return [x**3 for x in range(start, end + 1)]
 
-generator = SquareGenerator()
+# usage of task 8:
+generator = CubicGenerator()
+cubes = generator.generate_squares(1, 5)
+print(" Task 8: List of cubes from 1 to 5: ", cubes)
+
+# Task 3 (Classes) (it is now moved to square_generator module):
+generator = CubicGenerator() # I changed it from SquareGenerator to Cubic Generator because SquareGenerator is abstract after task 10.
 try:
     squares = generator.generate_squares(1, 10)
     print("List of squares from 1 to 10:", squares)
@@ -23,17 +35,3 @@ try:
 
 except ValueError as e:
     print(f"Error: {e}")
-
-# Task 8 (Inheritance):
-class CubicGenerator(SquareGenerator):
-    def generate_squares(self, start, end):
-    # Task 5 (Exceptions) is also inherited, so we need to handle if end < start
-        if end < start:
-            raise ValueError("End of the range cannot be less than the start.")
-        return [x**3 for x in range(start, end + 1)]
-
-    # Task 9 (Function overriding):
-    def generate_squares(self, start, end):
-        if end < start:
-            raise ValueError("End of the range cannot be less than the start.")
-        return super().generate_squares(start, end)

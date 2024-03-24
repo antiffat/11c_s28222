@@ -1,13 +1,15 @@
 import math
+from abc import ABC, abstractmethod
 
 # Task 6 (Modules):
-class SquareGenerator:
+# Task 10 (Abstract Elements):
+class SquareGenerator(ABC):
+    @abstractmethod
     def generate_squares(self, start, end):
-        # Task 5 (Exceptions):
-        if end < start:
-            raise ValueError("End of the range cannot be less than the start.")
-        return [x ** 2 for x in range(start, end + 1)]
+        pass
 
     # Task 4 (Libraries):
     def calculate_square_roots(self, squares):
+        if squares is None:
+            raise ValueError("Input list cannot be None")
         return [math.sqrt(x) for x in squares]
